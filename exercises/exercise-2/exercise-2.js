@@ -70,3 +70,25 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function gryffHouse(hogwarts) {
+  for (let person in hogwarts) {
+    let { firstName, lastName, house, pet, occupation } = hogwarts[person];
+    if (house === "Gryffindor") {
+      console.log(`${firstName} ${lastName}`);
+    }
+  }
+}
+
+gryffHouse(hogwarts);
+
+function hasPets(hogwarts) {
+  for (let person in hogwarts) {
+    let { firstName, lastName, house, pet, occupation } = hogwarts[person];
+    if (pet !== null && occupation === "Teacher") {
+      console.log(`${firstName} ${lastName}`);
+    }
+  }
+}
+
+hasPets(hogwarts);
